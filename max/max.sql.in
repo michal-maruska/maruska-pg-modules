@@ -1,0 +1,39 @@
+
+
+
+create or replace function max(int4,int4)
+returns int4
+as '$libdir/max.so','max_of_2' language 'c';
+
+create or replace function max(int8,int8)
+returns int8
+as '$libdir/max.so','max_of_2big' language 'c';
+
+
+select max(1309,132);
+
+select max(1309::int8,132::int8);
+
+
+
+
+
+
+
+
+create or replace function min(int4,int4)
+returns int4
+as '$libdir/max.so','min_of_2' language 'c';
+
+create or replace function min(int8,int8)
+returns int8
+as '$libdir/max.so','min_of_2big' language 'c';
+
+
+
+
+select min(1309,132);
+
+select min(1309::int8,132::int8);
+
+

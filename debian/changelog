@@ -1,0 +1,24 @@
+pg-char-in-set (2.0) wheezy; urgency=low
+
+  * fix Arch: all -> any
+  * adapt to no virtual pkg   postgresql-server-dev
+  * rename binary pkg to reflect the PG ABI
+  * debian: cdbs ->  dh
+  * comment
+  * clean a MACRO
+
+ -- Michal Maruska <mmaruska@gmail.com>  Tue, 30 Jul 2013 03:44:32 +0200
+
+char-in-set (1.2) precise; urgency=low
+
+  * Debian: postinst
+  * adapt for 9.2
+
+ -- Michal Maruska <mmaruska@gmail.com>  Sun, 17 Mar 2013 20:47:45 +0100
+
+char-in-set (1) UNRELEASED; urgency=low
+
+  * init
+
+ -- Michal Maruska <mmaruska@gmail.com>  Wed, 27 Apr 2011 01:42:49 +0200
+

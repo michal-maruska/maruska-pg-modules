@@ -1,0 +1,21 @@
+
+
+-- bigint
+create or replace function natural_sex(char)
+returns char
+as '$libdir/nsex.so','nsex' language 'c';
+
+-- STRICT
+-- why volatile?
+
+SELECT natural_sex(NULL);
+SELECT natural_sex('a'::char);
+
+
+
+select distinct natural_sex(sex) from person;
+
+
+-- select thumbsize(1235::smallint, 405::smallint, 1::smallint);
+-- select thumbsize(1235::smallint, 405::smallint, 0::smallint);
+

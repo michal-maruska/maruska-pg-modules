@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+debian/control:
+	# fix the Package name
+        # pg_server_abi
+	PG_VERSION=$$(pg_config --version |sed -e 's/^PostgreSQL //;s/\.[[:digit:]]\+$$//'); \
+	sed -e "s/@PG_VERSION@/$${PG_VERSION}/" debian/control.in > $@

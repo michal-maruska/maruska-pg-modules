@@ -1,0 +1,28 @@
+
+
+include_dir = $(shell  pg_config --includedir-server)
+lib_dir= $(shell pg_config  --pkglibdir)
+
+CFLAGS+=-fpic -I $(include_dir)
+#;$(PGINCLUDE)
+
+USER=postgres
+
+
+SH_OBJ=mule-tex.so
+
+all: $(SH_OBJ)
+
+
+%.so:%.o
+	gcc  -shared  $^ -o $@
+
+
+
+install: all
+	cp  $(SH_OBJ)  $(lib_dir)/
+	psql -U $(USER) -f install.sql
+
+clean: 
+	rm *.so *.o
+

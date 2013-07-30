@@ -1,0 +1,71 @@
+
+
+-- drop function mule_tex(text);
+-- $libdir
+create or replace function mule_tex(text)
+returns text
+as '$libdir/mule.so' language 'c';
+
+
+select mule_tex('фдлавфаšéříšéřé');
+select mule_tex('');
+select mule_tex(NULL);
+
+
+
+
+create or replace function cyrillic_utf8(text)
+returns text
+as '$libdir/mule.so' language 'c';
+
+select cyrillic_utf8('фдлавфаšéříšéřé');
+select cyrillic_utf8('');
+select cyrillic_utf8(NULL);
+
+
+
+create or replace function latin2_utf8(text)
+returns text
+strict
+language 'c'
+as '$libdir/mule.so' ;
+
+
+create or replace function latin1_utf8(text)
+returns text
+strict
+language 'c'
+as '$libdir/mule.so' ;
+
+
+create or replace function utf8_cyrillic(text)
+returns text                    -- bytea
+strict
+language 'c'
+as '$libdir/mule.so';
+
+
+
+
+
+
+
+create or replace function mule_utf8(text)
+returns text
+as '$libdir/mule.so' language 'c';
+
+SELECT mule_utf8('aaaa');
+
+
+
+CREATE or replace FUNCTION demule(text)
+RETURNS text
+as '$libdir/mule.so' language 'c';
+
+
+select(demule('фдлавфаšéříšéřé'));
+
+SELECT demule(italiano) as italiano FROM commenti WHERE ((numero = 48473));
+
+-- update trad set trad = cyrillic_utf8(trad) where lingua='russo';
+

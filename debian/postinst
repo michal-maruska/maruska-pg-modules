@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+pkgname=char_in_set
+
+if [ "$1" = configure ]; then
+    echo "now run:  psql -f /usr/share/postgresql/9.2/contrib/${pkgname}.sql"
+fi
+
+#DEBHELPER#

@@ -1,0 +1,12 @@
+
+--
+create or replace function thumbsize(smallint, smallint, smallint)
+returns smallint
+as '$libdir/thumbsize.so','thumbsize' language 'c';
+
+
+--- Tests:
+
+select thumbsize(1235::smallint, 405::smallint, 1::smallint);
+select thumbsize(1235::smallint, 405::smallint, 0::smallint);
+

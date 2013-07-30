@@ -1,0 +1,50 @@
+
+* What it does?
+we scale to 100x100 max.
+and possibly rotate.
+
+
+** foto_img
+** foto_img2
+-- use boolean?
+
+
+
+foto_img2
+
+perl code:
+
+
+
+my ($numero,$name,$h,$w)=@_;
+
+
+
+my $x,$y; # x <---->
+
+my $max=200;
+my $postfix="/2";
+
+if (($w==0) || ($h==0)) {return ''};
+
+if ($w>$h){
+        $x= $max;
+        $y=int($h*$max/$w);
+        }
+else {
+        $x=int($w*$max/$h);
+        $y=$max;
+        };
+
+return '<img src="/f/'.
+        $numero.
+        '/'.
+        $name.
+        '/t'.$postfix.'" width="'.
+        $x.
+        '" height="'.
+        $y.
+        '">';
+ | foto_img2
+(1 riga)
+

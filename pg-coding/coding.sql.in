@@ -1,0 +1,16 @@
+
+
+
+
+create or replace function f5(text)
+returns text
+STRICT
+as '$libdir/coding.so' language 'c';
+
+-- strict
+--  RETURNS NULL ON NULL INPUT
+
+-- TEST
+
+
+select f5('абвгдежзийклмнопрстуфхцчшщэюя');

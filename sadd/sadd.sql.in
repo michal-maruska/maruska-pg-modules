@@ -1,0 +1,32 @@
+
+-- bigint?
+create or replace function sset(text,int, text)
+returns int
+as '$libdir/sadd.so','sset' language 'c'
+STRICT  VOLATILE;
+
+
+
+
+create table a(numero int,  a text);
+
+insert into a values (1309,'should be overwritten');
+-- confirm the values
+SELECT * from a;
+
+
+-- test NULL argument
+SELECT sset('a', NULL, 'ab cd cd cd cd cd xy');
+SELECT * from a;
+
+
+
+-- test the functionality (in regular case)
+SELECT sset('a', 1309, ' аб ab cd cd cd cd cd xy');
+SELECT * from a;
+
+
+
+-- clean
+DROP table a;
+

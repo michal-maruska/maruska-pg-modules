@@ -1,0 +1,7 @@
+
+So, we need some Multiple values per (primary) KEY.
+Key -> val1, val2 ....
+
+we have a function SADD (set-add), which will SET
+the val1 .... to a given set (extracted out of a string).
+

@@ -1,0 +1,31 @@
+
+
+
+
+create or replace function char_in_text(char, text) returns bool
+as '$libdir/char_in_set.so' language 'c';
+
+
+
+-- drop function retchar(text);
+-- create or replace function retchar(text) returns "char"
+-- as '/usr/lib/postgresql/ret.so' language 'c';
+
+
+
+
+
+-- TESTS:
+-- Null -> Null
+select char_in_text('a', NULL);
+
+
+select char_in_text('b', 'a');
+
+select char_in_text('a', '');
+select char_in_text('a'::char, 'abca'::text);
+
+
+select char_in_text('x', 'abcaxvery long string so it fails!');
+select char_in_text('q', 'very long string so it fails!');
+

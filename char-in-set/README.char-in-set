@@ -1,0 +1,6 @@
+
+
+char_in_text
+I use this to check ...
+
+char_in_set (data_io.fuma::char,data_tu.p_fumo, \'fumo\'::text)

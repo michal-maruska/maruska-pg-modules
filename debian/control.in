@@ -1,0 +1,57 @@
+Source: maruska-pg-modules
+Section: database
+Priority: extra
+Maintainer: Michal Maruska <mmaruska@gmail.com>
+Build-Depends: cdbs, debhelper (>= 7), postgresql-server-dev-@PG_VERSION@
+Standards-Version: 3.7.2
+
+Package: pg-@PG_VERSION@-char-in-set
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: Function to check a char in a string.
+Provides: pg-char-in-set
+Conflicts: char-in-set
+
+Package: pg-@PG_VERSION@-coding
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: f5: latinization of Cyrilic text.
+Provides: pg-coding
+Conflicts: pg-coding (<= 1.4)
+
+
+Package: pg-@PG_VERSION@-thumbsize
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: compute simple rectangle sizes
+
+Package: pg-@PG_VERSION@-natural-sex
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: pg: map "sex" to natural
+
+Package: pg-@PG_VERSION@-mule
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: f5: latinization of Cyrilic text.
+
+Package: pg-@PG_VERSION@-max
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: fixme!
+
+Package: pg-@PG_VERSION@-human
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: human-readable printing of numbers in PG
+
+Package: pg-@PG_VERSION@-sadd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: sadd: adding sets through another table
+
+Package: pg-@PG_VERSION@-texify
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, postgresql-@PG_VERSION@
+Description: PG: output (my) TeX encoding of UTF-8 (Cyrilic & latin2) text.
+

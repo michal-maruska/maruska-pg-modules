@@ -1,0 +1,14 @@
+#!/bin/bash -xeu
+
+PG_VERSION=$(pg_config --version |sed -e 's/^PostgreSQL //;s/\.[[:digit:]]\+$//')
+
+packages=(char-in-set coding mule sadd)
+
+for pkg in ${packages[@]};
+do
+    # replace pg-  with  pg-ABI
+    sed -e "s/@PKG@/$pkg/" debian/template.install.in > debian/pg-${PG_VERSION}-${pkg}.install
+done
+
+sed -e "s/@PG_VERSION@/$PG_VERSION/" debian/control.in > debian/control
+#make -f debian/rules  debian/control
