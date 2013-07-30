@@ -2,7 +2,7 @@
 
 PG_VERSION=$(pg_config --version |sed -e 's/^PostgreSQL //;s/\.[[:digit:]]\+$//')
 
-packages=(char-in-set coding mule sadd)
+packages=(char-in-set coding mule sadd human sadd thumbsize)
 
 for pkg in ${packages[@]};
 do
