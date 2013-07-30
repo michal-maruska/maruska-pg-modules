@@ -1,0 +1,10 @@
+
+
+create or replace function human(int8)
+returns text
+as '$libdir/human.so','human' language 'c';
+
+grant execute  on function human(int8)   to public;
+
+-- TESTS
+select human(123456789);
