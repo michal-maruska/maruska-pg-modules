@@ -1,6 +1,6 @@
 
 
-SUBDIRS := char-in-set thumbsize texify sadd pg-human pg-coding natural_sex mule max
+SUBDIRS := char-in-set thumbsize texify sadd human coding natural_sex mule max
 
 
 .DEFAULT:	all
