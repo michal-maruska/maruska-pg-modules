@@ -3,7 +3,7 @@
 
 
 create or replace function char_in_text(char, text) returns bool
-as '$libdir/char_in_set.so' language 'c';
+as '$libdir/char-in-set.so' language 'c';
 
 
 
