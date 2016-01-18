@@ -50,7 +50,7 @@
 #include <error.h>
 
 #include "human.h"
-#include <postgresql/postgres.h>
+#include <postgres.h>
 #include <fmgr.h>
 #include <string.h>
 

@@ -1,4 +1,4 @@
-#include <postgresql/postgres.h>
+#include <postgres.h>
 #include <fmgr.h>
 
 
