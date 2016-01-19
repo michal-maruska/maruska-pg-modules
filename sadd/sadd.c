@@ -4,7 +4,8 @@
 
 #include <postgres.h>
 #include <catalog/pg_type.h>
-#include <postgresql/9.2/server/catalog/pg_collation.h>
+// postgresql/9.5/server/
+#include <catalog/pg_collation.h>
 #include <fmgr.h>
 #include <regex/regex.h>
 #include <executor/spi.h>
