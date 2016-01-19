@@ -1,6 +1,6 @@
 
 
-SUBDIRS := char-in-set thumbsize texify sadd human coding nsex mule max
+SUBDIRS := char-in-set thumbsize texify sadd human coding natural-sex mule max
 
 
 .DEFAULT:	all

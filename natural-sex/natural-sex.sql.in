@@ -3,7 +3,7 @@
 -- bigint
 create or replace function natural_sex(char)
 returns char
-as '$libdir/nsex.so','nsex' language 'c';
+as '$libdir/natural-sex.so','nsex' language 'c';
 
 -- STRICT
 -- why volatile?
