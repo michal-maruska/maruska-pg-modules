@@ -1,6 +1,12 @@
 #!/bin/bash -xeu
 
-PG_VERSION=$(pg_config --version |sed -e 's/^PostgreSQL //;s/\.[[:digit:]]\+$//')
+# Bind the sources with a specific PG version.
+# So debian/control is generated.
+
+# PostgreSQL 12.2 (Debian 12.2-4-maruska)
+# PG_VERSION=$(pg_config --version |sed -e 's/^PostgreSQL //;s/\.[[:digit:]]\+$//')
+PG_VERSION=$(pg_config --version |sed -e 's/^PostgreSQL \([[:digit:]]\+\)\..*$/\1/')
+# /;s/\.[[:digit:]]\+$//
 
 packages=(char-in-set coding human max mule natural-sex sadd texify thumbsize)
 
