@@ -1,3 +1,16 @@
+maruska-pg-modules (3.1) unstable; urgency=medium
+
+  * fix issue with  - vs _ in char-in-set
+  * drop cdbs as build-dep
+  * Header file is <postgres.h>.
+  * catalog header file
+  * Try to rename nsex. Must follow template.install.in
+  * fix the pg version extraction
+  * Now the version is simply 12, so not *.*?
+  * compat 9
+
+ -- Michal Maruska <mmaruska@gmail.com>  Sun, 16 Aug 2020 22:32:48 +0200
+
 maruska-pg-modules (3.0) wheezy; urgency=low
 
   * one big source package for the many binary ones
