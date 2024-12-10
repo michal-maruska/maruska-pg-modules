@@ -1,3 +1,9 @@
+maruska-pg-modules (3.3) unstable; urgency=medium
+
+  * rebuild
+
+ -- Michal Maruska <mmaruska@gmail.com>  Tue, 10 Dec 2024 15:35:05 +0100
+
 maruska-pg-modules (3.2) unstable; urgency=medium
 
   * Use the new hook preauto (to generate debian/control)
