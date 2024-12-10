@@ -1,3 +1,6 @@
 usr/lib/postgresql/*/lib/@PKG@.so
 usr/share/doc/postgresql-doc-*/contrib/README.@PKG@*
 usr/share/postgresql/*/contrib/@PKG@.sql
+# llvm bitcode only for LLVM
+usr/lib/postgresql/*/lib/bitcode/@PKG@/@PKG@.bc
+usr/lib/postgresql/*/lib/bitcode/@PKG@.index.bc
