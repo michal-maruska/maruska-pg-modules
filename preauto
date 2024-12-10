@@ -19,7 +19,7 @@ packages=(char-in-set coding human max mule natural-sex sadd texify thumbsize)
 for pkg in ${packages[@]};
 do
     # replace pg-  with  pg-ABI
-    sed -e "s/@PKG@/$pkg/" debian/template.install.in > debian/pg-${PG_VERSION}-${pkg}.install
+    sed -e "s/@PKG@/$pkg/g" debian/template.install.in > debian/pg-${PG_VERSION}-${pkg}.install
 done
 
 sed -e "s/@PG_VERSION@/$PG_VERSION/" debian/control.in > debian/control
