@@ -1,3 +1,14 @@
+maruska-pg-modules (3.2) unstable; urgency=medium
+
+  * Use the new hook preauto (to generate debian/control)
+  * propagate failure from $()
+  * necessary header file for SET_VARSIZE
+  * compat 13
+  * preauto use Global flag for SED
+  * Install LLVM bitcode files also
+
+ -- Michal Maruska <mmaruska@gmail.com>  Tue, 10 Dec 2024 15:33:57 +0100
+
 maruska-pg-modules (3.1) unstable; urgency=medium
 
   * fix issue with  - vs _ in char-in-set
