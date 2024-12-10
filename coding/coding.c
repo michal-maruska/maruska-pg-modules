@@ -2,6 +2,7 @@
 /* generalization of translate  */
 
 #include <postgres.h>
+#include <varatt.h>
 #include <string.h>
 #include <fmgr.h>
 

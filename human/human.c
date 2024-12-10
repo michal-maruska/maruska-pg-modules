@@ -51,6 +51,7 @@
 
 #include "human.h"
 #include <postgres.h>
+#include <varatt.h>
 #include <fmgr.h>
 #include <string.h>
 
